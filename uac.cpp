@@ -731,7 +731,7 @@ extern "C" void __declspec(dllexport) __cdecl _(HWND hwndNSIS,UINT NSIScchStr,NS
 			bool IsAdmin=IsCurrentProcessAdmin();
 			BYTE UACMode=0;
 			const UINT OSVMaj=GetOSVerMaj();
-			DWORD ForkExitCode=ERROR_CANCELLED;//is this the best value to use? is it required?
+			DWORD ForkExitCode=NO_ERROR;
 			TRACEF("UAC:RunElevated: admin=%d os=%d.%d runmode=%u\n",IsAdmin,OSVMaj,GetOSVerMin(),G().RunMode);
 			
 #ifdef FEAT_AUTOPAGEJUMP
